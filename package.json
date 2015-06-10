@@ -1,0 +1,22 @@
+{
+  "name": "steamalytics",
+  "version": "0.1.0",
+  "description": "Evolving Steam profile data analysis project",
+  "author": "adyates",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adyates/steamalytics.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "grunt": "~0.4.5",
+    "grunt-shell": "^1.1.2",
+    "load-grunt-tasks": "^3.2.0",
+    "mocha": "^2.2.4"
+  },
+  "dependencies": {
+    "lodash": "^3.9.3",
+    "steam-api": "^1.1.3"
+  }
+}
