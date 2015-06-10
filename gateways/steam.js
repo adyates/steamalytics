@@ -12,24 +12,24 @@ player.GetOwnedGames("76561197976927510", true, true).done(function(result) {
 		key = item.appId;
         	gameToPlayMap[key] = item.playtimeForever
 		tagFetchResult = http.get({
-		                host: 'http://steamtagchoose.apphb.com/';
-		                path: 'api/SteamApp/' + key;
+			        host: 'http://steamtagchoose.apphb.com/',
+			        path: 'api/SteamApp/' + key,
 		        }, function(response) {
-		        
-			        var body = '';
+	        	        var body = '';
 				response.on('data', function(d) {
-					body += d;
+        				body += d;
 				});
-				
+	      		
 				response.on('end', function() {
-					var game = JSON.parse(body);
-					tagsToGameMap[game.AppId] = game.Tags;
+			        	var game = JSON.parse(body);
+	         			tagsToGameMap[game.AppId] = game.Tags;
 					gameToPlayMap[game.AppId].tags = game.Tags;
 				});
 		});
 	});
 });
 
+console.log(tagsToGameMap);
 
 
 
